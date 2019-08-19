@@ -1,0 +1,40 @@
+<%- include header %>
+<div class="container-fluid text-center" >
+	<div class="search">
+	<form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="10" placeholder="جستو جو" required id="search">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger" onclick="location.replace('/home/store?text=' + document.getElementById('search').value)">... جوستو جو کنید</button>
+      </div>
+    </div>
+  </form>
+</div>		
+<% data.forEach(function(voice) { %>
+<div class="card" data-id="<% voice.id %>">
+  <img alt="User Pic" src="/images/voise_images/<%=voice['voice-img'] %>" class="img-circle img-responsive">
+  <div>
+    <h4><b><%=voice['voice-album'] %></b></h4> 
+    <p><%=voice['voice-name'] %> - <%=voice['voice-cat'] %></p> 
+	   <audio  controls controlsList="nodownload">
+ 		 <source src="/voice/<%=voice['voice-name']%>" type="audio/mp3">
+ 		 <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+	  </audio>
+			<button class="button" onclick="location.replace('/home/purchase?id=<%=voice['id']%>')">خرید آهنگ</button>
+  </div>
+</div>
+<% }) %>
+	  
+</nav>
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a class="active" href="#">1</a>
+  <a  href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+</div>	  
+<%- include footer %>	

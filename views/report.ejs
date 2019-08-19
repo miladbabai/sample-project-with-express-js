@@ -1,0 +1,66 @@
+<%- include headeradmin %>
+<div id="report" >
+	<div class="container col-sm-12" id="mainform">
+		<div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title">گزارش فروش</div>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal" role="form" method="" action="" onSubmit="return checkblank(this);" enctype="multipart/form-data">
+						<div class=" col-md-9 col-lg-9 ">
+							<table class="table table-user-information">
+							  <tbody>
+								<% data.forEach(function(repor) { %>
+							  <tr>
+								<td>User Name:</td>
+								<td><%=repor['first_name'] %></td>
+								<td>voice name:</td>
+								<td><%=repor['voice-name'] %></td>
+								<td>date:</td>
+								<td><%=repor['date'] %></td>
+							  </tr>
+							  <% }) %>
+							  </tbody>
+							</table>
+						  </div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container col-sm-12" id="mainform">
+		<div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title">گزارش محصولات پر فروش</div>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal" role="form" method="" action="" onSubmit="return checkblank(this);" enctype="multipart/form-data">
+
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container col-sm-12" id="mainform">
+		<div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title">گزارش فعالیت کاربران کاربران </div>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal" role="form" method="" action="" onSubmit="return checkblank(this);" enctype="multipart/form-data">
+
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div> 
+<div>	
+<%- include footer %>	
